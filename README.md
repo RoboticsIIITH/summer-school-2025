@@ -17,8 +17,9 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 * [Contact the Organizers](#📬-contact-the-organizers)
 
 ## 🕒 Mode of Conduction
-- **Lectures: 11:00 AM – 1:00 PM** each day (Sundays Off) + **Hands-on Sessions: 2:00 PM onwards**
-- **Location: H-101/102** 
+- **Lectures: 11:00 AM – 1:00 PM** each day (Sundays Off) 
+- **Hands-on Sessions: 2:00 PM onwards** - with discussions and Q&A over Slack
+- **Location: H-101/102 (Himalaya Block)** 
 - **Mode**: Primarily **In-Person** (Hybrid mode for remote participants)
 
 
@@ -27,8 +28,8 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 
 | #  | Date         | Topic                             | Presenter(s)                       | Lecture Notes | Assignments |
 |----|--------------|-----------------------------------|------------------------------------|---------------|-------------|
-| 1  | May 17, 2025 | Introduction                      | Prof. Madhav                       | ✅            | ✅          |
-| 2  | May 19, 2025 | Linear Algebra & Probability      | Vishal                             |             |           |
+| 1  | May 17, 2025 | Introduction                      | Prof. Madhav                       | --            | --         |
+| 2  | May 19, 2025 | Linear Algebra & Probability | Vishal |[Linear Algebra Resources](lectures/02-linear-algebra-probability/README.md) | [Linear Algebra Problem Set](lectures/02-linear-algebra-probability/lec-02-linear-algebra-problems.pdf) |           |            |           |
 | 3  | May 20, 2025 | Coordinate Systems & Transformations | Aadith                          |               |             |
 | 4  | May 21, 2025 | Non-Linear Optimisation           | Faizal                             |               |             |
 | 5  | May 22, 2025 | Dynamics and Control - I          | Sarthak, Astik, Samaksh            |               |             |
@@ -51,11 +52,12 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 22 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
 | 23 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
 | 24 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas Stanley              |               |             |
-| 25 | Jun 14, 2025 | Diffusion Models in Robotics      | Jayaram                            |               |             |
 
+📌 **Note:**  
+The schedule will be regularly updated with slides, reference materials, and coding assignments as sessions conclude. Stay tuned by clicking on **Watch** for this repository or subscribing to its RSS feed.
 
-📌 Note:
-The schedule will be updated regularly with slides, reference material, and coding assignments as sessions are completed (by end of day). Stay tuned!
+[![RSS](https://img.shields.io/badge/RSS-feed-orange?logo=rss&style=flat-square)](https://github.com/RoboticsIIITH/summer-school-2025/commits/main.atom)
+
 
 ## 📬 Contact the Organizers
 - **Rohit Jayanti** — [rohit.j@research.iiit.ac.in](mailto:rohit.j@research.iiit.ac.in)
