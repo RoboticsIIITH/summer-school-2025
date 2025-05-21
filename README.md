@@ -35,7 +35,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 5  | May 22, 2025 | Dynamics and Control - I          | Sarthak, Samaksh            |      [Dynamics and Control - I Resources](lectures/05-dynamics-control-1/README.md)         |             |
 | 6  | May 23, 2025 | Dynamics and Control - II         | Astik           |               |             |
 | 7  | May 24, 2025 | Dynamics and Control - III        | Sarthak           |               |             |
-| 8  | May 26, 2025 | Deep Learning - I                 | Yash                               |               |             |
+| 8  | May 25, 2025 | Deep Learning - I                 | Yash                               |               |             |
 | 9  | May 27, 2025 | Deep Learning - II                | Gaurav                             |               |             |
 | 10 | May 28, 2025 | Deep Learning - III               | Swayam, Vansh                      |               |             |
 | 11 | May 29, 2025 | Multi-View Geometry - I           | Rohit                              |               |             |
@@ -52,6 +52,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 22 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
 | 23 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
 | 24 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas Stanley              |               |             |
+| 25 | Jun 14, 2025 | Diffusion Models in Robotics            | Jayaram              |               |             |
 
 📌 **Note:**  
 The schedule will be regularly updated with slides, reference materials, and coding assignments as sessions conclude. Stay tuned by clicking on **Watch** for this repository or subscribing to its RSS feed.
