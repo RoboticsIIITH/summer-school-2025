@@ -15,7 +15,7 @@ We then dive into constrained optimization via Lagrange Multipliers and discusse
 
 ## 📄 Assignment
 
-- TBD
+- **Exercise Notebook:** [![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/1KoL1K9w3FtYSm9gJYajri4OdVuCEhC7x?usp=sharing)
 
 Please submit questions or discussion points on the **`#module-1-math-background`** Slack channel.
 
@@ -25,7 +25,7 @@ Please submit questions or discussion points on the **`#module-1-math-background
 
 | Topic                             | Link                                                                                   |
 |----------------------------------|----------------------------------------------------------------------------------------|
-| Lecture Notes                   | [lec-04-nlopt-notes.pdf](./lec-04-nlopt-notes.pdf)                    |
+| Lecture Notes             | [lec-04-nlopt-notes.pdf](./lec-04-nlopt-notes.pdf)                    |
 
 ---
 

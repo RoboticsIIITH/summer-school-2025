@@ -31,7 +31,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 1  | May 17, 2025 | Introduction                      | Prof. Madhav                       | --            | --         |
 | 2  | May 19, 2025 | Linear Algebra & Probability | Vishal |[Linear Algebra Resources](lectures/02-linear-algebra-probability/README.md) | [Linear Algebra Problem Set](lectures/02-linear-algebra-probability/lec-02-linear-algebra-problems.pdf) |           |            |           |
 | 3  | May 20, 2025 | Coordinate Systems & Transformations | Aadith | [Transformations Resources/Slides](lectures/03-coord-systems-transformations/README.md) | [Transformations Problem Set](lectures/03-coord-systems-transformations/lec-03-transforms-assignment.pdf) | [Lecture Slides](lectures/03-coord-systems-transformations/lec-03-transforms-slides.pdf) |
-| 4  | May 21, 2025 | Non-Linear Optimization           | Faizal                             | [Non-Linear Optimization Notes](lectures/04-non-linear-optimization/lec-04-nlopt-notes.pdf)              |             |
+| 4  | May 21, 2025 | Non-Linear Optimization           | Faizal                             | [Non-Linear Optimization Resources](lectures/04-non-linear-optimization/README.md)              |    [Colab Notebook](https://colab.research.google.com/drive/1KoL1K9w3FtYSm9gJYajri4OdVuCEhC7x?usp=sharing)         |
 | 5  | May 22, 2025 | Dynamics and Control - I          | Sarthak, Astik, Samaksh            |               |             |
 | 6  | May 23, 2025 | Dynamics and Control - II         | Sarthak, Astik, Samaksh            |               |             |
 | 7  | May 24, 2025 | Dynamics and Control - III        | Sarthak, Astik, Samaksh            |               |             |
