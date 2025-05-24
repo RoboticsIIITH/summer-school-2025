@@ -6,15 +6,6 @@
 ---
 
 ## 📖 Overview
-
-### 🎛️ Control Systems
-
-We introduce the structure and intent of control in robotics:
-
-- Hierarchies of control: from strategic planning to real-time actuation.
-- Anatomy of a control loop: sensing, decision, and execution.
-- Where control matters: trajectory tracking, stabilization, interaction, and many more!
-
 ### ⚙️ Robot Dynamics
 
 A foundation in motion modeling for physical systems:
@@ -39,6 +30,5 @@ Please raise doubts or engage in discussion on the **`#module-2-dynamics-control
 
 | Topic                             | Link                                                                                   |
 |----------------------------------|----------------------------------------------------------------------------------------|
-| Lecture Slides (Sarthak) - Controls           | [lec-05-controls-introduction.pdf](./lec-05-controls-introduction.pdf)                    |
 | Lecture Slides (Samaksh) - Robot Dynamics          | [lec-05-dynamics-introduction.pdf](./lec-05-dynamics-introduction.pdf)                  |
 ---
