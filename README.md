@@ -35,7 +35,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 5  | May 22, 2025 | Dynamics and Control - I          | Samaksh            |      [Dynamics and Control - I Resources](lectures/05-dynamics-control-1/README.md)         |     --        |
 | 6  | May 23, 2025 | Dynamics and Control - II         | Sarthak, Astik           |   [Dynamics and Control - II Resources](lectures/06-dynamics-control-2/README.md)             |    --         |
 | 7  | May 24, 2025 | Dynamics and Control - III        | Sarthak           |   [Dynamics and Control - III Resources](lectures/07-dynamics-control-3/README.md)             |    [Controls Assignment](lectures/07-dynamics-control-3/README.md#-assignment)         |
-| 8  | May 25, 2025 | Deep Learning - I                 | Yash                               |               |             |
+| 8  | May 25, 2025 | Deep Learning - I                 | Yash                               |    [Deep Learning - I Resources](lectures/08-deep-learning-1/README.md)           |  [MNIST Hands-on](lectures/08-deep-learning-1/README.md#-assignment)           |
 | 9  | May 27, 2025 | Deep Learning - II                | Gaurav                             |               |             |
 | 10 | May 28, 2025 | Deep Learning - III               | Swayam, Vansh                      |               |             |
 | 11 | May 29, 2025 | Multi-View Geometry - I           | Rohit                              |               |             |
