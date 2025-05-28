@@ -36,8 +36,8 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 6  | May 23, 2025 | Dynamics and Control - II         | Sarthak, Astik           |   [Dynamics and Control - II Resources](lectures/06-dynamics-control-2/README.md)             |    --         |
 | 7  | May 24, 2025 | Dynamics and Control - III        | Sarthak           |   [Dynamics and Control - III Resources](lectures/07-dynamics-control-3/README.md)             |    [Controls Assignment](lectures/07-dynamics-control-3/README.md#-assignment)         |
 | 8  | May 25, 2025 | Deep Learning - I                 | Yash                               |    [Deep Learning - I Resources](lectures/08-deep-learning-1/README.md)           |  [MNIST Hands-on](lectures/08-deep-learning-1/README.md#-assignment)           |
-| 9  | May 27, 2025 | Deep Learning - II                | Gaurav                             |               |             |
-| 10 | May 28, 2025 | Deep Learning - III               | Swayam, Vansh                      |               |             |
+| 9  | May 27, 2025 | Deep Learning - II                | Gaurav                             |   [Deep Learning - II Resources](lectures/09-deep-learning-2/README.md)            |  [Activation Functions, Siren, Batch Norm Exercise Notebooks](lectures/09-deep-learning-2/README.md#-assignment)            |
+| 10 | May 28, 2025 | Deep Learning - III               | Swayam, Vansh                      | [Deep Learning - III Resources](lectures/10-deep-learning-3/README.md) | [Colab Notebook](https://colab.research.google.com/drive/18txr34ybFEwosnieoRhWLT6hgZ204_wL)<br>📝 Graded |
 | 11 | May 29, 2025 | Multi-View Geometry - I           | Rohit                              |               |             |
 | 12 | May 30, 2025 | Multi-View Geometry - II          | Akash, Aneesh                      |               |             |
 | 13 | May 31, 2025 | Deep Learning - IV                | Sanket                             |               |             |
