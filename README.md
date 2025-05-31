@@ -38,21 +38,20 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 8  | May 25, 2025 | Deep Learning - I                 | Yash                               |    [Deep Learning - I Resources](lectures/08-deep-learning-1/README.md)           |  [MNIST Hands-on](lectures/08-deep-learning-1/README.md#-assignment)           |
 | 9  | May 27, 2025 | Deep Learning - II                | Gaurav                             |   [Deep Learning - II Resources](lectures/09-deep-learning-2/README.md)            |  [Activation Functions, Siren, Batch Norm Exercise Notebooks](lectures/09-deep-learning-2/README.md#-assignment)            |
 | 10 | May 28, 2025 | Deep Learning - III               | Swayam, Vansh                      | [Deep Learning - III Resources](lectures/10-deep-learning-3/README.md) | [Colab Notebook](https://colab.research.google.com/drive/18txr34ybFEwosnieoRhWLT6hgZ204_wL)<br>📝 Graded |
-| 11 | May 29, 2025 | Multi-View Geometry - I           | Rohit                              |               |             |
-| 12 | May 30, 2025 | Multi-View Geometry - II          | Akash, Aneesh                      |               |             |
-| 13 | May 31, 2025 | Deep Learning - IV                | Sanket                             |               |             |
-| 14 | Jun 2, 2025  | Multi-View Geometry - III         | Rohit                              |               |             |
-| 15 | Jun 3, 2025  | Multi-View Geometry - IV          | Rohan, Rohit                       |               |             |
-| 16 | Jun 4, 2025  | Learning for 3D Vision            | Akash                              |               |             |
-| 17 | Jun 5, 2025  | SLAM - I                          | Aneesh                             |               |             |
-| 18 | Jun 6, 2025  | SLAM - II                         | Ansh Shah                          |               |             |
-| 19 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |               |             |
-| 20 | Jun 9, 2025  | Motion Planning - II              | Ansh, Nabanita                     |               |             |
-| 21 | Jun 10, 2025 | Motion Planning - III             | Meet, Nabanita                     |               |             |
-| 22 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
-| 23 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
-| 24 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas Stanley              |               |             |
-| 25 | Jun 14, 2025 | Diffusion Models in Robotics            | Jayaram              |               |             |
+| 11 | May 31, 2025 | Deep Learning - IV                | Sanket                             |     [Deep Learning - IV Resources](lectures/11-deep-learning-4/README.md)          |    [Colab Notebooks](lectures/11-deep-learning-4/README.md#-assignmenthands-on)          |
+| 12 | Jun 2, 2025  | Multi-View Geometry - I, II       | Rohit                              |               |             |
+| 13 | Jun 2, 2025  | Multi-View Geometry - III         | Rohit                              |               |             |
+| 14 | Jun 3, 2025  | Multi-View Geometry - IV          | Rohan, Rohit                       |               |             |
+| 15 | Jun 4, 2025  | Learning for 3D Vision            | Akash                              |               |             |
+| 16 | Jun 5, 2025  | SLAM - I                          | Aneesh                             |               |             |
+| 17 | Jun 6, 2025  | SLAM - II                         | Ansh Shah                          |               |             |
+| 18 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |               |             |
+| 19 | Jun 9, 2025  | Motion Planning - II              | Ansh, Nabanita                     |               |             |
+| 20 | Jun 10, 2025 | Motion Planning - III             | Meet, Nabanita                     |               |             |
+| 21 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
+| 22 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
+| 23 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas Stanley              |               |             |
+| 24 | Jun 14, 2025 | Diffusion Models in Robotics      | Jayaram              |               |             |
 
 📌 **Note:**  
 The schedule will be regularly updated with slides, reference materials, and coding assignments as sessions conclude. Stay tuned by clicking on **Watch** for this repository or subscribing to its RSS feed.
