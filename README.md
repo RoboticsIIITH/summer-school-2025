@@ -31,7 +31,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 1  | May 17, 2025 | Introduction                      | Prof. Madhava Krishna                       | --            | --         |
 | 2  | May 19, 2025 | Linear Algebra & Probability      | Vishal |[Linear Algebra Resources](lectures/02-linear-algebra-probability/README.md) | [Linear Algebra Problem Set](lectures/02-linear-algebra-probability/lec-02-linear-algebra-problems.pdf) |           |            |           |
 | 3  | May 20, 2025 | Coordinate Systems & Transformations | Aadith | [Transformations Resources/Slides](lectures/03-coord-systems-transformations/README.md) | [Transformations Problem Set](lectures/03-coord-systems-transformations/lec-03-transforms-assignment.pdf) | [Lecture Slides](lectures/03-coord-systems-transformations/lec-03-transforms-slides.pdf) |
-| 4  | May 21, 2025 | Non-Linear Optimization           | Faizal                             | [Non-Linear Optimization Resources](lectures/04-non-linear-optimization/README.md)              |    [Colab Notebook](https://colab.research.google.com/drive/1KoL1K9w3FtYSm9gJYajri4OdVuCEhC7x?usp=sharing)         |
+| 4  | May 21, 2025 | Non-Linear Optimization           | Faizal                             | [Non-Linear Optimization Resources](lectures/04-non-linear-optimization/README.md)              |    [Optimization through IK on 3R Manipulator Colab Notebook](https://colab.research.google.com/drive/1KoL1K9w3FtYSm9gJYajri4OdVuCEhC7x?usp=sharing)         |
 | 5  | May 22, 2025 | Dynamics and Control - I          | Samaksh            |      [Dynamics and Control - I Resources](lectures/05-dynamics-control-1/README.md)         |     --        |
 | 6  | May 23, 2025 | Dynamics and Control - II         | Sarthak, Astik           |   [Dynamics and Control - II Resources](lectures/06-dynamics-control-2/README.md)             |    --         |
 | 7  | May 24, 2025 | Dynamics and Control - III        | Sarthak           |   [Dynamics and Control - III Resources](lectures/07-dynamics-control-3/README.md)             |    [Controls Assignment](lectures/07-dynamics-control-3/README.md#-assignment)         |
@@ -42,16 +42,16 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 12 | Jun 2, 2025 (AM)  | Multi-View Geometry - I      | Rohit                              | [Multi-View Geometry - I Resources](lectures/12-mvg-1/README.md)              |  [Direct Linear Transform Exercise Workbook](lectures/12-mvg-1/direct-linear-transform.ipynb)           |
 | 13 | Jun 2, 2025 (PM)  | Multi-View Geometry - II, III| Rohit                              |    [Multi-View Geometry - II, III Resources](lectures/13-mvg-2-3/README.md)           |     [Visual Odometry Assignment](lectures/13-mvg-2-3/visual_odometry_problem_set.pdf) <br> [Visual Features Colab Notebook](https://colab.research.google.com/drive/1NPN8j9mH9b2eiZPVPJRF8-T2OOuwWwxy?usp=sharing)|
 | 14 | Jun 3, 2025  | Multi-View Geometry - IV          | Rohan, Rohit                       |     [Multi-View Geometry - IV Resources](lectures/14-mvg-4/README.md)          |     [COLMAP, HLoc Walkthrough, Map-Free Re-localization with MASt3R Assignment](lectures/14-mvg-4/README.md#-assignments)       |
-| 15 | Jun 4, 2025  | Learning for 3D Vision            | Akash                              |               |             |
+| 15 | Jun 4, 2025  | Learning for 3D Vision            | Akash                              |    [Learning for 3D Vision Resources](lectures/15-learning-3d-vision/README.md)             |     [VoxNet, PointNet, PointNet++ Colab Workbooks](lectures/15-learning-3d-vision/README.md#-hands-on-workbooks)        |
 | 16 | Jun 5, 2025  | Visual SLAM                       | Aneesh                             |               |             |
 | 17 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |               |             |
-| 18 | Jun 10, 2025 (AM)  | Motion Planning - II              | Ansh                     |               |             |
-| 19 | Jun 10, 2025 (PM) | Motion Planning - III             | Meet                     |               |             |
+| 18 | Jun 10, 2025 (AM)  | Motion Planning - II        | Ansh                     |               |             |
+| 19 | Jun 10, 2025 (PM) | Motion Planning - III        | Meet                     |               |             |
 | 20 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
 | 21 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
 | 22 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas              |               |             |
 | 23 | Jun 14, 2025 | Diffusion Models - Basics         | Anant              |               |             |
-| 24 | Jun 14, 2025 | Diffusion Models for Robotics      | Jayaram              |               |             |
+| 24 | Jun 14, 2025 | Diffusion Models for Robotics     | Jayaram              |               |             |
 
 📌 **Note:**  
 The schedule will be regularly updated with slides, reference materials, and coding assignments as sessions conclude. Stay tuned by clicking on **Watch** for this repository or subscribing to its RSS feed.
