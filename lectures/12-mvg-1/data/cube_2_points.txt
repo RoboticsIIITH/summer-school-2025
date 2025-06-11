@@ -1,0 +1,14 @@
+# Tool used: https://pixspy.com/
+# Axes assumed - Ground/Table plane is XZ plane, Y pointing up (opposite gravity)
+# Format: x, y, z, u, v - (3D Co-ordinates, Corresponding 2D Image Co-ordinates)
+
+0, 0, 0, 1682, 1474
+0, -3, 0, 1722, 2460
+
+0, 0, 3, 1192, 1133
+0, -3, 3, 1285, 1970
+
+3, 0, 0, 2611, 1196
+3, -3, 0, 2552, 2060
+
+3, 0, 3, 1999, 958
