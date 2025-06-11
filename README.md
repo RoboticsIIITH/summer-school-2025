@@ -24,7 +24,8 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 
 
 ## 📅 Sessions Schedule
-[![Google Sheets](https://img.shields.io/badge/View%20Detailed%20Schedule-Google%20Sheets-34A853?logo=google-sheets&logoColor=white&style=flat-square)](https://docs.google.com/spreadsheets/d/1qjU-zWitD6S8JJlbWS90PVDoHJdfmojjqB4BuxkT4w8/edit?usp=sharing)
+[![Detailed Schedule + Topics](https://img.shields.io/badge/View%20Detailed%20Schedule%20%2B%20Topics-Google%20Sheets-34A853?logo=google-sheets&logoColor=white&style=flat-square)](https://docs.google.com/spreadsheets/d/1qjU-zWitD6S8JJlbWS90PVDoHJdfmojjqB4BuxkT4w8/edit?usp=sharing)
+
 
 | #  | Date         | Topic                             | Presenter(s)                       | Lecture Notes | Assignments |
 |----|--------------|-----------------------------------|------------------------------------|---------------|-------------|
@@ -44,7 +45,7 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 14 | Jun 3, 2025  | Multi-View Geometry - IV          | Rohan, Rohit                       |     [Multi-View Geometry - IV Resources](lectures/14-mvg-4/README.md)          |     [COLMAP, HLoc Walkthrough, Map-Free Re-localization with MASt3R Assignment](lectures/14-mvg-4/README.md#-assignments)       |
 | 15 | Jun 4, 2025  | Learning for 3D Vision            | Akash                              |    [Learning for 3D Vision Resources](lectures/15-learning-3d-vision/README.md)             |     [VoxNet, PointNet, PointNet++ Colab Workbooks](lectures/15-learning-3d-vision/README.md#-hands-on-workbooks)        |
 | 16 | Jun 5, 2025  | Visual SLAM                       | Aneesh                             |  [Visual SLAM Resources](lectures/16-visual-slam/README.md)             |  [Concept Nodes Assignment](lectures/16-visual-slam/README.md#-assignment)           |
-| 17 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |               |             |
+| 17 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |     [Motion Planning - I Resources](lectures/17-motion-planning-1/README.md)          |     --        |
 | 18 | Jun 10, 2025 (AM)  | Motion Planning - II        | Ansh                     |               |             |
 | 19 | Jun 10, 2025 (PM) | Motion Planning - III        | Meet                     |               |             |
 | 20 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
