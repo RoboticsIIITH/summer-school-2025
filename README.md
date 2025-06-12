@@ -29,8 +29,8 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 
 | #  | Date         | Topic                             | Presenter(s)                       | Lecture Notes | Assignments |
 |----|--------------|-----------------------------------|------------------------------------|---------------|-------------|
-| 1  | May 17, 2025 | Introduction                      | Prof. Madhava Krishna                       | --            | --         |
-| 2  | May 19, 2025 | Linear Algebra & Probability      | Vishal |[Linear Algebra Resources](lectures/02-linear-algebra-probability/README.md) | [Linear Algebra Problem Set](lectures/02-linear-algebra-probability/lec-02-linear-algebra-problems.pdf) |           |            |           |
+| 1  | May 17, 2025 | Introduction                      | Prof. Madhava Krishna              | --            | --          |
+| 2  | May 19, 2025 | Linear Algebra & Probability      | Vishal |[Linear Algebra Resources](lectures/02-linear-algebra-probability/README.md) | [Linear Algebra Problem Set](lectures/02-linear-algebra-probability/lec-02-linear-algebra-problems.pdf) |
 | 3  | May 20, 2025 | Coordinate Systems & Transformations | Aadith | [Transformations Resources/Slides](lectures/03-coord-systems-transformations/README.md) | [Transformations Problem Set](lectures/03-coord-systems-transformations/lec-03-transforms-assignment.pdf) | [Lecture Slides](lectures/03-coord-systems-transformations/lec-03-transforms-slides.pdf) |
 | 4  | May 21, 2025 | Non-Linear Optimization           | Faizal                             | [Non-Linear Optimization Resources](lectures/04-non-linear-optimization/README.md)              |    [Optimization through IK on 3R Manipulator Colab Notebook](https://colab.research.google.com/drive/1KoL1K9w3FtYSm9gJYajri4OdVuCEhC7x?usp=sharing)         |
 | 5  | May 22, 2025 | Dynamics and Control - I          | Samaksh            |      [Dynamics and Control - I Resources](lectures/05-dynamics-control-1/README.md)         |     --        |
@@ -48,9 +48,9 @@ Sessions will be conducted by **graduate students and faculty** from the **RRC L
 | 17 | Jun 7, 2025  | Motion Planning - I               | Faizal                             |     [Motion Planning - I Resources](lectures/17-motion-planning-1/README.md)          |     --        |
 | 18 | Jun 10, 2025 (AM)  | Motion Planning - II        | Ansh                     |               |             |
 | 19 | Jun 10, 2025 (PM) | Motion Planning - III        | Meet                     |               |             |
-| 20 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |               |             |
-| 21 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       |               |             |
-| 22 | Jun 13, 2025 | Reinforcement Learning            | Vishal, Tejas              |               |             |
+| 20 | Jun 11, 2025 | ROS - I                           | Tarun, Soham                       |    [ROS Deployment - I Resources](lectures/20-ros-deployment-1/README.md)       | 🎓 Capstone 1/2 <br> Robot Tele-operation <br> [![Start Project](https://img.shields.io/badge/Start-Project-blue?logo=ros&logoColor=white)](lectures/20-ros-deployment-1/README.md#-capstone-project---part-1)|
+| 21 | Jun 12, 2025 | ROS - II                          | Tarun, Soham                       | [ROS Deployment - II Resources](lectures/21-ros-deployment-2/README.md)       | 🎓 Capstone 2/2 <br> Autonomous Navigation <br> [![Launch](https://img.shields.io/badge/Start-Project-blue?logo=ros&logoColor=white)](lectures/21-ros-deployment-2/README.md#-capstone-project---part-2) |
+| 22 | Jun 13, 2025 | Reinforcement Learning            | Vishal              |               |             |
 | 23 | Jun 14, 2025 | Diffusion Models - Basics         | Anant              |               |             |
 | 24 | Jun 14, 2025 | Diffusion Models for Robotics     | Jayaram              |               |             |
 
