@@ -47,4 +47,7 @@ Please raise doubts or engage in discussion on the **`#module-2-dynamics-control
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Lecture Slides (Sarthak) - Controls - Introduction         | [lec-06-controls-introduction.pdf](./lec-06-controls-introduction.pdf)                    |
 | Lecture Slides (Astik) - Controls - PID, LQR        | [lec-06-controls-pid-lqr.pdf](./lec-06-controls-pid-lqr.pdf)                  |
+| **Modern Robotics: Mechanics, Planning, and Control** – Kevin M. Lynch & Frank C. Park (Northwestern University) | [![Textbook](https://img.shields.io/badge/Open-Textbook-blue?logo=readthedocs)](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)<br>[![Videos](https://img.shields.io/badge/Watch-Lecture_Videos-red?logo=youtube&logoColor=white)](https://hades.mech.northwestern.edu/index.php/Modern_Robotics_Videos) |
+
+
 ---
