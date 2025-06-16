@@ -47,4 +47,7 @@ Please raise doubts or engage in discussion on the **`#module-2-dynamics-control
 |----------------------------------|----------------------------------------------------------------------------------------|
 | Lecture Slides (Sarthak) - Controls - Introduction         | [lec-06-controls-introduction.pdf](./lec-06-controls-introduction.pdf)                    |
 | Lecture Slides (Astik) - Controls - PID, LQR        | [lec-06-controls-pid-lqr.pdf](./lec-06-controls-pid-lqr.pdf)                  |
+| **Modern Robotics: Mechanics, Planning, and Control** – Kevin M. Lynch & Frank C. Park (Northwestern University) | [![Textbook](https://img.shields.io/badge/Open-Textbook-blue?logo=readthedocs)](https://hades.mech.northwestern.edu/index.php/Modern_Robotics)<br>[![Videos](https://img.shields.io/badge/Watch-Lecture_Videos-red?logo=youtube&logoColor=white)](https://hades.mech.northwestern.edu/index.php/Modern_Robotics_Videos) |
+| **Computational Control** (Saverio Bolognani, ETH Zurich, 2024) | [![Course Website](https://img.shields.io/badge/View-Course_Website-brightgreen?logo=academia)](https://www.bsaver.io/teaching/computational-control)<br>[![Chat with COCO Expert](https://img.shields.io/badge/Chat-🥥%20COCO%20Expert-brown?style=flat&labelColor=white)](https://bsaver.io/COCO-Expert) |
+
 ---

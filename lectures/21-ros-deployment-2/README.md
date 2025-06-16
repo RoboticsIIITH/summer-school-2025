@@ -60,7 +60,7 @@ Successfully launch the robot, integrate the provided autonomy stack (including 
 
 | Topic/Tool                         | Link                                                                                                                                      |
 |------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------|
-| 📑 Lecture Slides – ROS Deployment 2 | [![PDF](https://img.shields.io/badge/Open-Slides-red?logo=adobeacrobatreader&logoColor=white)](./lec-21-ros-deployment-2.pdf)            |
+| 📑 Lecture Slides – ROS Deployment Part 2 | [![PDF](https://img.shields.io/badge/Open-Slides-red?logo=adobeacrobatreader&logoColor=white)](./lec-21-ros-deployment-2.pdf)            |
 | 📘 Articulated Robotics Tutorials     | [![Visit](https://img.shields.io/badge/Open-Tutorials-brightgreen?logo=readthedocs&logoColor=white)](https://articulatedrobotics.xyz/tutorials/) |
 | 📚 Nav2 Documentation                 | [![Docs](https://img.shields.io/badge/Open-Nav2%20Docs-blueviolet?logo=ros&logoColor=white)](https://docs.nav2.org)                      |
 | 🏗️ Gazebo Getting Started             | [![Docs](https://img.shields.io/badge/Open-Gazebo-orange?logo=gazebo&logoColor=white)](https://gazebosim.org/docs/latest/getstarted/)   |
