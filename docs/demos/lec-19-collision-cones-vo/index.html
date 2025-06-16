@@ -1,0 +1,689 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Collision Cones & Velocity Obstacles</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+        }
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            padding: 30px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(31, 38, 135, 0.37);
+        }
+        h1 {
+            text-align: center;
+            margin-bottom: 30px;
+            font-size: 2.5em;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .demo-section {
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 15px;
+            padding: 25px;
+            margin: 20px 0;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .canvas-container {
+            display: flex;
+            gap: 20px;
+            margin: 20px 0;
+        }
+        canvas {
+            background: rgba(255, 255, 255, 0.9);
+            border-radius: 10px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+        .controls {
+            background: rgba(255, 255, 255, 0.1);
+            padding: 15px;
+            border-radius: 10px;
+            margin: 15px 0;
+        }
+        .control-group {
+            margin: 10px 0;
+        }
+        label {
+            display: inline-block;
+            width: 120px;
+            font-weight: bold;
+        }
+        input[type="range"] {
+            width: 200px;
+            margin-left: 10px;
+        }
+        .explanation {
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            margin: 15px 0;
+            border-left: 4px solid #ffd700;
+        }
+        .math-formula {
+            background: rgba(0, 0, 0, 0.3);
+            padding: 15px;
+            border-radius: 8px;
+            font-family: 'Courier New', monospace;
+            margin: 10px 0;
+            text-align: center;
+            font-size: 1.1em;
+        }
+        .example-box {
+            background: rgba(255, 255, 255, 0.1);
+            border: 2px solid #ffd700;
+            border-radius: 10px;
+            padding: 20px;
+            margin: 15px 0; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>🚀 Collision Cones & Velocity Obstacles Interactive Demo</h1>
+        
+        <!-- Part 1: Collision Cone -->
+        <div class="demo-section">
+            <h2>📐 Part 1: Understanding Collision Cones</h2>
+            
+            <div class="explanation">
+                <h3>What is a Collision Cone?</h3>
+                <p>A <strong>collision cone</strong> represents all relative velocities that would cause two objects to collide within a given time. Think of it as a "danger zone" in velocity space.</p>
+            </div>
+
+            <div class="math-formula">
+                Relative Velocity: v⃗<sub>rel</sub> = v⃗<sub>A</sub> - v⃗<sub>B</sub><br>
+                Collision when: |p⃗<sub>A</sub>(t) - p⃗<sub>B</sub>(t)| ≤ R<sub>combined</sub>
+            </div>
+
+            <div class="canvas-container">
+                <div>
+                    <h4>Position Space</h4>
+                    <canvas id="positionCanvas" width="400" height="300"></canvas>
+                </div>
+                <div>
+                    <h4>Velocity Space (Collision Cone)</h4>
+                    <canvas id="velocityCanvas" width="400" height="300"></canvas>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Object A X:</label>
+                    <input type="range" id="objA_x" min="50" max="350" value="100">
+                    <span id="objA_x_val">100</span>
+                </div>
+                <div class="control-group">
+                    <label>Object A Y:</label>
+                    <input type="range" id="objA_y" min="50" max="250" value="150">
+                    <span id="objA_y_val">150</span>
+                </div>
+                <div class="control-group">
+                    <label>Object B X:</label>
+                    <input type="range" id="objB_x" min="50" max="350" value="300">
+                    <span id="objB_x_val">300</span>
+                </div>
+                <div class="control-group">
+                    <label>Object B Y:</label>
+                    <input type="range" id="objB_y" min="50" max="250" value="150">
+                    <span id="objB_y_val">150</span>
+                </div>
+                <div class="control-group">
+                    <label>Radius A:</label>
+                    <input type="range" id="radius_a" min="10" max="40" value="20">
+                    <span id="radius_a_val">20</span>
+                </div>
+                <div class="control-group">
+                    <label>Radius B:</label>
+                    <input type="range" id="radius_b" min="10" max="40" value="25">
+                    <span id="radius_b_val">25</span>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>🎯 Real-World Example: Autonomous Vehicle</h4>
+                <p>Imagine two self-driving cars approaching an intersection. The collision cone shows all relative speeds and directions that would result in a crash. The autonomous system must choose velocities <em>outside</em> this cone.</p>
+                <ul>
+                    <li><strong>Red Cone:</strong> Dangerous relative velocities</li>
+                    <li><strong>Green Areas:</strong> Safe relative velocities</li>
+                    <li><strong>Cone Angle:</strong> Depends on object sizes and distance</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Part 2: Velocity Obstacles -->
+        <div class="demo-section">
+            <h2>🎯 Part 2: Velocity Obstacles (VO)</h2>
+            
+            <div class="explanation">
+                <h3>Beyond Static Collision Cones</h3>
+                <p>Velocity Obstacles extend collision cones to handle <strong>moving obstacles</strong>. Instead of just relative velocity, we consider the actual velocities needed to avoid a moving obstacle.</p>
+            </div>
+
+            <div class="math-formula">
+                VO<sub>A</sub><sup>B</sup> = {v⃗<sub>A</sub> : ∃t > 0, p⃗<sub>A</sub> + tv⃗<sub>A</sub> ∈ p⃗<sub>B</sub> + tv⃗<sub>B</sub> ⊕ D}
+            </div>
+
+            <div class="canvas-container">
+                <div>
+                    <h4>Moving Objects Scenario</h4>
+                    <canvas id="movingCanvas" width="400" height="300"></canvas>
+                </div>
+                <div>
+                    <h4>Velocity Obstacle Space</h4>
+                    <canvas id="voCanvas" width="400" height="300"></canvas>
+                </div>
+            </div>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Robot Vel X:</label>
+                    <input type="range" id="robot_vx" min="-50" max="50" value="20">
+                    <span id="robot_vx_val">20</span>
+                </div>
+                <div class="control-group">
+                    <label>Robot Vel Y:</label>
+                    <input type="range" id="robot_vy" min="-50" max="50" value="0">
+                    <span id="robot_vy_val">0</span>
+                </div>
+                <div class="control-group">
+                    <label>Obstacle Vel X:</label>
+                    <input type="range" id="obs_vx" min="-50" max="50" value="-15">
+                    <span id="obs_vx_val">-15</span>
+                </div>
+                <div class="control-group">
+                    <label>Obstacle Vel Y:</label>
+                    <input type="range" id="obs_vy" min="-50" max="50" value="10">
+                    <span id="obs_vy_val">10</span>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>🤖 Practical Example: Robot Navigation</h4>
+                <p>A warehouse robot (blue) needs to avoid a moving cart (red):</p>
+                <ul>
+                    <li><strong>Traditional approach:</strong> Stop and wait</li>
+                    <li><strong>VO approach:</strong> Predict future positions and choose safe velocity</li>
+                    <li><strong>Benefit:</strong> Continuous motion, higher efficiency</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Part 3: Reciprocal VO -->
+        <div class="demo-section">
+            <h2>🤝 Part 3: Reciprocal Velocity Obstacles (RVO)</h2>
+            
+            <div class="explanation">
+                <h3>Shared Responsibility</h3>
+                <p>When both agents are intelligent (like two robots), they should <strong>both</strong> contribute to collision avoidance. RVO splits the avoidance responsibility equally.</p>
+            </div>
+
+            <div class="math-formula">
+                RVO<sub>A</sub><sup>B</sup> = v⃗<sub>A</sub> + ½(VO<sub>A</sub><sup>B</sup> - v⃗<sub>A</sub>)
+            </div>
+
+            <canvas id="rvoCanvas" width="600" height="400" style="display: block; margin: 20px auto;"></canvas>
+
+            <div class="example-box">
+                <h4>👥 Multi-Agent Example: Drone Swarm</h4>
+                <p>In a drone swarm, each drone uses RVO to avoid others:</p>
+                <ul>
+                    <li><strong>Symmetric:</strong> Each drone takes equal responsibility</li>
+                    <li><strong>Oscillation-free:</strong> Prevents "dancing" behavior</li>
+                    <li><strong>Scalable:</strong> Works with hundreds of agents</li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- Part 4: Constraints -->
+        <div class="demo-section">
+            <h2>⚙️ Part 4: Constraints in Velocity Selection</h2>
+            
+            <div class="explanation">
+                <h3>Real-World Limitations</h3>
+                <p>Robots can't move at any velocity - they have physical and operational constraints that must be considered.</p>
+            </div>
+
+            <canvas id="constraintsCanvas" width="600" height="400" style="display: block; margin: 20px auto;"></canvas>
+
+            <div class="controls">
+                <div class="control-group">
+                    <label>Max Speed:</label>
+                    <input type="range" id="max_speed" min="20" max="100" value="60">
+                    <span id="max_speed_val">60</span>
+                </div>
+                <div class="control-group">
+                    <label>Preferred Direction:</label>
+                    <input type="range" id="pref_angle" min="0" max="360" value="45">
+                    <span id="pref_angle_val">45°</span>
+                </div>
+            </div>
+
+            <div class="example-box">
+                <h4>🏭 Industrial Example: Robotic Arm</h4>
+                <p>A robotic arm in a factory has multiple constraints:</p>
+                <ul>
+                    <li><strong>Kinematic:</strong> Joint angle limits, max velocity</li>
+                    <li><strong>Dynamic:</strong> Actuator torque limits, stability</li>
+                    <li><strong>Task:</strong> Must reach target while avoiding obstacles</li>
+                    <li><strong>Safety:</strong> Emergency stop zones, human presence</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="explanation">
+            <h3>🎓 Key Takeaways</h3>
+            <p><strong>Collision Cones:</strong> Show dangerous relative velocities in a geometric way</p>
+            <p><strong>Velocity Obstacles:</strong> Extend cones to handle moving obstacles in real-time</p>
+            <p><strong>RVO:</strong> Enables symmetric, oscillation-free multi-agent navigation</p>
+            <p><strong>Constraints:</strong> Ensure solutions are physically realizable and operationally safe</p>
+        </div>
+    </div>
+
+    <script>
+        // Canvas contexts
+        const posCtx = document.getElementById('positionCanvas').getContext('2d');
+        const velCtx = document.getElementById('velocityCanvas').getContext('2d');
+        const movCtx = document.getElementById('movingCanvas').getContext('2d');
+        const voCtx = document.getElementById('voCanvas').getContext('2d');
+        const rvoCtx = document.getElementById('rvoCanvas').getContext('2d');
+        const constCtx = document.getElementById('constraintsCanvas').getContext('2d');
+
+        // Animation variables
+        let animationTime = 0;
+
+        // Update display values and redraw
+        function updateValues() {
+            const controls = ['objA_x', 'objA_y', 'objB_x', 'objB_y', 'radius_a', 'radius_b', 
+                            'robot_vx', 'robot_vy', 'obs_vx', 'obs_vy', 'max_speed', 'pref_angle'];
+            
+            controls.forEach(id => {
+                const slider = document.getElementById(id);
+                const display = document.getElementById(id + '_val');
+                if (slider && display) {
+                    let value = slider.value;
+                    if (id === 'pref_angle') value += '°';
+                    display.textContent = value;
+                }
+            });
+            
+            drawAll();
+        }
+
+        // Draw collision cone demonstration
+        function drawCollisionCone() {
+            posCtx.clearRect(0, 0, 400, 300);
+            velCtx.clearRect(0, 0, 400, 300);
+
+            const ax = parseInt(document.getElementById('objA_x').value);
+            const ay = parseInt(document.getElementById('objA_y').value);
+            const bx = parseInt(document.getElementById('objB_x').value);
+            const by = parseInt(document.getElementById('objB_y').value);
+            const ra = parseInt(document.getElementById('radius_a').value);
+            const rb = parseInt(document.getElementById('radius_b').value);
+
+            // Position space
+            posCtx.fillStyle = '#3498db';
+            posCtx.beginPath();
+            posCtx.arc(ax, ay, ra, 0, 2 * Math.PI);
+            posCtx.fill();
+            posCtx.fillStyle = '#e74c3c';
+            posCtx.beginPath();
+            posCtx.arc(bx, by, rb, 0, 2 * Math.PI);
+            posCtx.fill();
+
+            // Combined radius circle around B
+            posCtx.strokeStyle = '#95a5a6';
+            posCtx.setLineDash([5, 5]);
+            posCtx.beginPath();
+            posCtx.arc(bx, by, ra + rb, 0, 2 * Math.PI);
+            posCtx.stroke();
+            posCtx.setLineDash([]);
+
+            // Labels
+            posCtx.fillStyle = 'black';
+            posCtx.font = '14px Arial';
+            posCtx.fillText('A', ax - 5, ay + 5);
+            posCtx.fillText('B', bx - 5, by + 5);
+
+            // Velocity space - collision cone
+            const dx = bx - ax;
+            const dy = by - ay;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const R = ra + rb;
+
+            if (dist > R) {
+                const centerX = 200;
+                const centerY = 150;
+                const scale = 2;
+
+                // Draw axes
+                velCtx.strokeStyle = '#bdc3c7';
+                velCtx.beginPath();
+                velCtx.moveTo(0, centerY);
+                velCtx.lineTo(400, centerY);
+                velCtx.moveTo(centerX, 0);
+                velCtx.lineTo(centerX, 300);
+                velCtx.stroke();
+
+                // Calculate cone parameters
+                const alpha = Math.asin(R / dist);
+                const beta = Math.atan2(dy, dx);
+
+                // Draw collision cone
+                velCtx.fillStyle = 'rgba(231, 76, 60, 0.3)';
+                velCtx.strokeStyle = '#e74c3c';
+                velCtx.lineWidth = 2;
+                
+                const apex_x = centerX + dx * scale;
+                const apex_y = centerY - dy * scale;
+                const coneLength = 100;
+
+                velCtx.beginPath();
+                velCtx.moveTo(apex_x, apex_y);
+                velCtx.lineTo(
+                    apex_x + coneLength * Math.cos(beta + alpha),
+                    apex_y - coneLength * Math.sin(beta + alpha)
+                );
+                velCtx.lineTo(
+                    apex_x + coneLength * Math.cos(beta - alpha),
+                    apex_y - coneLength * Math.sin(beta - alpha)
+                );
+                velCtx.closePath();
+                velCtx.fill();
+                velCtx.stroke();
+
+                // Labels
+                velCtx.fillStyle = 'black';
+                velCtx.font = '12px Arial';
+                velCtx.fillText('Safe Zone', 50, 50);
+                velCtx.fillStyle = '#e74c3c';
+                velCtx.fillText('Collision Cone', apex_x + 10, apex_y - 10);
+            }
+        }
+
+        // Draw velocity obstacles
+        function drawVelocityObstacles() {
+            movCtx.clearRect(0, 0, 400, 300);
+            voCtx.clearRect(0, 0, 400, 300);
+
+            const robot_x = 100, robot_y = 150;
+            const obs_x = 300, obs_y = 150;
+            const robot_vx = parseInt(document.getElementById('robot_vx').value);
+            const robot_vy = parseInt(document.getElementById('robot_vy').value);
+            const obs_vx = parseInt(document.getElementById('obs_vx').value);
+            const obs_vy = parseInt(document.getElementById('obs_vy').value);
+
+            // Draw moving scenario
+            movCtx.fillStyle = '#3498db';
+            movCtx.beginPath();
+            movCtx.arc(robot_x, robot_y, 15, 0, 2 * Math.PI);
+            movCtx.fill();
+
+            movCtx.fillStyle = '#e74c3c';
+            movCtx.beginPath();
+            movCtx.arc(obs_x, obs_y, 20, 0, 2 * Math.PI);
+            movCtx.fill();
+
+            // Draw velocity vectors
+            movCtx.strokeStyle = '#3498db';
+            movCtx.lineWidth = 3;
+            movCtx.beginPath();
+            movCtx.moveTo(robot_x, robot_y);
+            movCtx.lineTo(robot_x + robot_vx * 2, robot_y - robot_vy * 2);
+            movCtx.stroke();
+
+            movCtx.strokeStyle = '#e74c3c';
+            movCtx.beginPath();
+            movCtx.moveTo(obs_x, obs_y);
+            movCtx.lineTo(obs_x + obs_vx * 2, obs_y - obs_vy * 2);
+            movCtx.stroke();
+
+            // Future positions
+            for (let t = 1; t <= 5; t++) {
+                const alpha = 0.3 - t * 0.05;
+                
+                movCtx.fillStyle = `rgba(52, 152, 219, ${alpha})`;
+                movCtx.beginPath();
+                movCtx.arc(robot_x + robot_vx * t * 0.5, robot_y - robot_vy * t * 0.5, 15, 0, 2 * Math.PI);
+                movCtx.fill();
+
+                movCtx.fillStyle = `rgba(231, 76, 60, ${alpha})`;
+                movCtx.beginPath();
+                movCtx.arc(obs_x + obs_vx * t * 0.5, obs_y - obs_vy * t * 0.5, 20, 0, 2 * Math.PI);
+                movCtx.fill();
+            }
+
+            // Labels
+            movCtx.fillStyle = 'black';
+            movCtx.font = '12px Arial';
+            movCtx.fillText('Robot', robot_x - 15, robot_y + 30);
+            movCtx.fillText('Obstacle', obs_x - 25, obs_y + 35);
+
+            // Velocity obstacle space
+            const centerX = 200, centerY = 150;
+            
+            // Draw axes
+            voCtx.strokeStyle = '#bdc3c7';
+            voCtx.beginPath();
+            voCtx.moveTo(0, centerY);
+            voCtx.lineTo(400, centerY);
+            voCtx.moveTo(centerX, 0);
+            voCtx.lineTo(centerX, 300);
+            voCtx.stroke();
+
+            // VO (translated collision cone)
+            const dx = obs_x - robot_x;
+            const dy = obs_y - robot_y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            const R = 35; // combined radius
+
+            if (dist > R) {
+                const alpha = Math.asin(R / dist);
+                const beta = Math.atan2(dy, dx);
+
+                // Translate by obstacle velocity
+                const apex_x = centerX + obs_vx * 2;
+                const apex_y = centerY - obs_vy * 2;
+                const coneLength = 80;
+
+                voCtx.fillStyle = 'rgba(231, 76, 60, 0.4)';
+                voCtx.strokeStyle = '#e74c3c';
+                voCtx.lineWidth = 2;
+                
+                voCtx.beginPath();
+                voCtx.moveTo(apex_x, apex_y);
+                voCtx.lineTo(
+                    apex_x + coneLength * Math.cos(beta + alpha),
+                    apex_y - coneLength * Math.sin(beta + alpha)
+                );
+                voCtx.lineTo(
+                    apex_x + coneLength * Math.cos(beta - alpha),
+                    apex_y - coneLength * Math.sin(beta - alpha)
+                );
+                voCtx.closePath();
+                voCtx.fill();
+                voCtx.stroke();
+
+                // Current robot velocity
+                voCtx.fillStyle = '#3498db';
+                voCtx.beginPath();
+                voCtx.arc(centerX + robot_vx * 2, centerY - robot_vy * 2, 5, 0, 2 * Math.PI);
+                voCtx.fill();
+
+                // Labels
+                voCtx.fillStyle = 'black';
+                voCtx.font = '11px Arial';
+                voCtx.fillText('Robot Velocity', centerX + robot_vx * 2 + 10, centerY - robot_vy * 2);
+                voCtx.fillStyle = '#e74c3c';
+                voCtx.fillText('Velocity Obstacle', apex_x + 10, apex_y - 10);
+            }
+        }
+
+        // Draw RVO demonstration
+        function drawRVO() {
+            rvoCtx.clearRect(0, 0, 600, 400);
+            
+            const centerX = 300, centerY = 200;
+            const time = animationTime * 0.02;
+            
+            // Two agents moving towards each other
+            const agent1_x = centerX - 150 + Math.sin(time) * 20;
+            const agent1_y = centerY - 50 + Math.cos(time * 0.7) * 10;
+            const agent2_x = centerX + 150 - Math.sin(time * 1.2) * 25;
+            const agent2_y = centerY + 50 + Math.cos(time * 0.8) * 15;
+
+            // Draw agents
+            rvoCtx.fillStyle = '#3498db';
+            rvoCtx.beginPath();
+            rvoCtx.arc(agent1_x, agent1_y, 20, 0, 2 * Math.PI);
+            rvoCtx.fill();
+
+            rvoCtx.fillStyle = '#e74c3c';
+            rvoCtx.beginPath();
+            rvoCtx.arc(agent2_x, agent2_y, 20, 0, 2 * Math.PI);
+            rvoCtx.fill();
+
+            // Draw RVO regions
+            const dx = agent2_x - agent1_x;
+            const dy = agent2_y - agent1_y;
+            const dist = Math.sqrt(dx * dx + dy * dy);
+            
+            if (dist > 40) {
+                const alpha = Math.asin(40 / dist);
+                const beta = Math.atan2(dy, dx);
+
+                // RVO for agent 1
+                rvoCtx.fillStyle = 'rgba(52, 152, 219, 0.2)';
+                rvoCtx.strokeStyle = '#3498db';
+                rvoCtx.lineWidth = 1;
+
+                const apex1_x = agent1_x + dx * 0.5;
+                const apex1_y = agent1_y + dy * 0.5;
+                const coneLength = 60;
+
+                rvoCtx.beginPath();
+                rvoCtx.moveTo(apex1_x, apex1_y);
+                rvoCtx.lineTo(
+                    apex1_x + coneLength * Math.cos(beta + alpha),
+                    apex1_y + coneLength * Math.sin(beta + alpha)
+                );
+                rvoCtx.lineTo(
+                    apex1_x + coneLength * Math.cos(beta - alpha),
+                    apex1_y + coneLength * Math.sin(beta - alpha)
+                );
+                rvoCtx.closePath();
+                rvoCtx.fill();
+                rvoCtx.stroke();
+            }
+
+            // Trajectories
+            rvoCtx.strokeStyle = 'rgba(52, 152, 219, 0.5)';
+            rvoCtx.setLineDash([2, 2]);
+            rvoCtx.beginPath();
+            rvoCtx.moveTo(agent1_x, agent1_y);
+            rvoCtx.lineTo(agent1_x + 100, agent1_y - 20);
+            rvoCtx.stroke();
+
+            rvoCtx.strokeStyle = 'rgba(231, 76, 60, 0.5)';
+            rvoCtx.beginPath();
+            rvoCtx.moveTo(agent2_x, agent2_y);
+            rvoCtx.lineTo(agent2_x - 100, agent2_y + 20);
+            rvoCtx.stroke();
+            rvoCtx.setLineDash([]);
+
+            // Labels
+            rvoCtx.fillStyle = 'black';
+            rvoCtx.font = '14px Arial';
+            rvoCtx.fillText('Agent A', agent1_x - 25, agent1_y + 35);
+            rvoCtx.fillText('Agent B', agent2_x - 25, agent2_y + 35);
+            rvoCtx.fillText('RVO regions ensure symmetric avoidance', 50, 50);
+        }
+
+        // Draw constraints visualization
+        function drawConstraints() {
+            constCtx.clearRect(0, 0, 600, 400);
+            
+            const centerX = 300, centerY = 200;
+            const maxSpeed = parseInt(document.getElementById('max_speed').value);
+            const prefAngle = parseInt(document.getElementById('pref_angle').value) * Math.PI / 180;
+
+            // Draw coordinate system
+            constCtx.strokeStyle = '#bdc3c7';
+            constCtx.beginPath();
+            constCtx.moveTo(0, centerY);
+            constCtx.lineTo(600, centerY);
+            constCtx.moveTo(centerX, 0);
+            constCtx.lineTo(centerX, 400);
+            constCtx.stroke();
+
+            // Maximum speed constraint (circle)
+            constCtx.strokeStyle = '#2ecc71';
+            constCtx.lineWidth = 3;
+            constCtx.setLineDash([]);
+            constCtx.beginPath();
+            constCtx.arc(centerX, centerY, maxSpeed * 1.5, 0, 2 * Math.PI);
+            constCtx.stroke();
+
+            // Velocity obstacle (example)
+            constCtx.fillStyle = 'rgba(231, 76, 60, 0.3)';
+            constCtx.beginPath();
+            constCtx.moveTo(centerX + 20, centerY - 30);
+            constCtx.lineTo(centerX + 80, centerY - 60);
+            constCtx.lineTo(centerX + 80, centerY);
+            constCtx.closePath();
+            constCtx.fill();
+
+            // Preferred direction
+            constCtx.strokeStyle = '#f39c12';
+            constCtx.lineWidth = 4;
+            constCtx.beginPath();
+            constCtx.moveTo(centerX, centerY);
+            constCtx.lineTo(
+                centerX + maxSpeed * Math.cos(prefAngle),
+                centerY - maxSpeed * Math.sin(prefAngle)
+            );
+            constCtx.stroke();
+            constCtx.fillStyle = 'black';
+            constCtx.font = '14px Arial';
+            constCtx.fillText('Preferred Direction', centerX + maxSpeed * Math.cos(prefAngle) + 10, 
+                              centerY - maxSpeed * Math.sin(prefAngle) - 10);
+            // Labels
+            constCtx.fillStyle = 'black';
+            constCtx.font = '14px Arial';
+            constCtx.fillText('Max Speed Constraint', centerX + maxSpeed * 1.5 + 10, centerY);
+            constCtx.fillText('Velocity Obstacle', centerX + 20, centerY - 30);
+        }
+        // Draw all canvases
+        function drawAll() {
+            drawCollisionCone();
+            drawVelocityObstacles();
+            drawRVO();
+            drawConstraints();
+        }
+        // Initial draw
+        drawAll();
+        // Update values on input change
+        document.querySelectorAll('input[type="range"]').forEach(input => {
+            input.addEventListener('input', updateValues);
+        });
+        // Animation loop for RVO
+        function animate() {
+            animationTime++;
+            drawRVO();
+            requestAnimationFrame(animate);
+        }
+        animate();
+    </script>
+</body>
+</html> 
+<!-- End of HTML Document -->

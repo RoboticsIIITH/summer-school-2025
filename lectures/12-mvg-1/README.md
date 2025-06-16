@@ -39,5 +39,6 @@ Each topic built on the last, tying together geometry, algebra, and practical ca
 | Camera Calibration *(Playlist)*                                  | [![YouTube](https://img.shields.io/badge/YouTube-Camera_Calibration-red?logo=youtube)](https://www.youtube.com/watch?v=S-UHiFsn-GI&list=PL2zRqk16wsdoCCLpou-dGo7QQNks1Ppzo) |
 | **Computer Vision – Andreas Geiger (Uni Tübingen)** *(Course + Playlist)* | [![YouTube](https://img.shields.io/badge/YouTube-Playlist-red?logo=youtube)](https://www.youtube.com/watch?v=YW1cIaOBkI8&list=PL05umP7R6ij35L2MHGzis8AEHz7mg381_) [![Website](https://img.shields.io/badge/Site-Course_Page-grey?logo=google-chrome)](https://uni-tuebingen.de/fakultaeten/mathematisch-naturwissenschaftliche-fakultaet/fachbereiche/informatik/lehrstuehle/autonomous-vision/lectures/computer-vision/) |
 | Lecture 02: Image Formation *(Slides)*                           | [![Drive](https://img.shields.io/badge/Slides-Image_Formation-blue?logo=google-drive)](https://drive.google.com/file/d/1UfcxEkqoXkHgOCZpUnzRHn7NM2hTqd38/view?usp=sharing) |
+| 📷 Cameras and Lenses – Interactive Visual Explainer by Bartosz Ciechanowski | [![Website](https://img.shields.io/badge/Open-Demo-blue?logo=googlechrome&logoColor=white)](https://ciechanow.ski/cameras-and-lenses/) |
 ---
 
