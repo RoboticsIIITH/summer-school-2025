@@ -1,6 +1,6 @@
 # Lecture 15: Learning for 3D Vision
 
-**Instructor:** Akash Kumbar  
+**Instructor:** Akash Kumbar ([portfolio](https://akash-kumbar.github.io/))
 **Date:** June 4, 2025
 
 ---
